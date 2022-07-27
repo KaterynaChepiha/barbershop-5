@@ -14,11 +14,11 @@
 .card-set__item {
     position: relative;
     overflow: hidden;
-}
 
-.card-set__item:hover .card-set__descr,
-.card-set__item:focus .card-set__descr {
-    transform: translateY(0);
+    &:hover .card-set__descr,
+    &:focus .card-set__descr {
+        transform: translateY(0);
+    }
 }
 
 .card-set__descr {
@@ -31,10 +31,8 @@
     margin: 0;
     padding: 25px 25px;
 
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.56;
-    color: #FFFFFF;
+    @include text(400, 18px, 28px, null);
+    color: var(--primary-text-color);
     background-color: rgba(255, 108, 0, 0.7);
 
     transform: translateY(100%);

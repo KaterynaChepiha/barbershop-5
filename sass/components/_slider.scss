@@ -3,7 +3,7 @@
     top: 50%;
     right: 55px;
     transform: translateY(-50%);
-    color: #FFFFFF;
+    color: var(--primary-text-color);
 }
 
 .slider__item {
@@ -45,7 +45,7 @@
     &--back {
         text-align: left;
         letter-spacing: 0.02em;
-        color: #9DA4BD;
+        color: var(--secondary-text-color);
         border: none;
         cursor: pointer;
         border-bottom: 1px solid rgba(157, 164, 189, 0.6);
@@ -54,7 +54,7 @@
     &--forward {
         text-align: right;
         letter-spacing: 0.1em;
-        color: #FFFFFF;
+        color: var(--primary-text-color);
         border-bottom: 1px solid #FFFFFF;
     }
 }

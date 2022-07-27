@@ -1,8 +1,8 @@
 .title {
     font-family: 'Raleway', sans-serif;
-    color: #ffffff;
+    color: var(--primary-text-color);
 
-@include text (700, 42px, 49px, 0.05em);
+    @include text (700, 42px, 49px, 0.05em);
 
     &--mode-light {
         color: #303030;

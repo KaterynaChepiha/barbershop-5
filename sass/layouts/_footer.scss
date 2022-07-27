@@ -12,11 +12,8 @@
 
 .footer__copyright {
     margin-left: 40px;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.2em;
-    color: #9DA4BD;
+    @include text (600, 11px, 15px, 0.2em);
+    color: var(--secondary-text-color);
 }
 
 .footer__list {
@@ -26,15 +23,15 @@
 
 .footer__item {
     margin-right: 30px;
-}
 
-.footer__item--instagram::before {
-    content: '';
-    margin-right: 20px;
-    width: 60px;
-    height: 1px;
-    display: inline-block;
-    background-color: #303030;
+    &--instagram::before {
+        content: '';
+        margin-right: 20px;
+        width: 60px;
+        height: 1px;
+        display: inline-block;
+        background-color: #303030;
+    }
 }
 
 .footer__item--instagram,

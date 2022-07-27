@@ -31,7 +31,7 @@
 
     line-height: 1.67;
     letter-spacing: 0.02em;
-    color: #9DA4BD;
+    color: var(--secondary-text-color);
 }
 
 .price-card--one {
@@ -47,18 +47,18 @@
     align-items: baseline;
     justify-content: space-between;
     gap: 6px;
-}
 
-.price__item:not(:last-child) {
-    margin-bottom: 20px;
-}
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
 
-.price__item::before {
-    content: '';
-    display: inline-block;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(157, 164, 189, 0.12);
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(157, 164, 189, 0.12);
+    }
 }
 
 .price__descr {

@@ -38,7 +38,7 @@
 .contacts__group {
     position: relative;
     margin-bottom: 44px;
-    color: #FFFFFF;
+    color: var(--primary-text-color);
 }
 
 .contacts__field {
@@ -46,26 +46,26 @@
     height: 26px;
     padding-left: 5px;
     padding-right: 5px;
-    color: #FFFFFF;
+    color: var(--primary-text-color);
     background-color: transparent;
     border: none;
     border-bottom: 1px solid rgba(157, 164, 189, 0.4);
     outline: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus,
+    &:not(:placeholder-shown) {
+        border-color: #ffffff;
+    }
 }
 
 .contacts__field--phone {
     width: 260px;
 }
 
-.contacts__field:focus,
-.contacts__field:not(:placeholder-shown) {
-    border-color: #ffffff;
-}
-
 .contacts__field:focus:invalid:not(:placeholder-shown),
 .contacts__field:invalid:not(:placeholder-shown) {
-    border-color: #FF6C00;
+    border-color: var(--accent-color);
 }
 
 .contacts__field:focus:valid:not(:placeholder-shown),
@@ -74,17 +74,14 @@
 }
 
 .contacts__field::placeholder {
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
+    @include text(600, 13px, 18px, 0.1em);
     color: rgba(157, 164, 189, 0.4);
     opacity: 0;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.contacts__field:focus::placeholder {
-    opacity: 1;
+    &:focus::placeholder {
+        opacity: 1;
+    }
 }
 
 .contacts__label {
@@ -92,10 +89,7 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
+    @include text(600, 13px, 18px, 0.1em);
     text-transform: uppercase;
     color: rgba(157, 164, 189, 0.4);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -106,7 +100,6 @@
     transform: translateY(-200%);
     color: #ffffff;
 }
-
 
 .contacts-messanger {
     display: flex;
@@ -124,10 +117,7 @@
     top: -30%;
     left: 0;
     transform: translateY(-50%);
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
+    @include text(600, 13px, 18px, 0.1em);
     text-transform: uppercase;
     color: rgba(157, 164, 189, 0.4);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -136,7 +126,7 @@
 .contacts-messange__textarea:focus+.contacts-messange__comment,
 .contacts-messange__textare:not(:placeholder-shown)+.contacts-messange__comment {
     transform: translateY(-200%);
-    color: #ffffff;
+    color: var(--primary-text-color);
 }
 
 .contacts__btn {
@@ -144,7 +134,7 @@
 }
 
 .contacts__title--right {
-    color: #FFFFFF;
+    color: var(--primary-text-color);
 }
 
 .contacts__item:not(:last-child) {
@@ -160,15 +150,15 @@
     align-items: center;
     line-height: 1.67;
     letter-spacing: 0.02em;
-    color: #9DA4BD;
+    color: var(--secondary-text-color);
     font-style: normal;
     transition: color 250ms linear;
-    stroke: #9DA4BD;
-}
+    stroke: var(--secondary-text-color);
 
-.contacts__link:hover,
-.contacts__link:focus {
-    color: #FF6C00;
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
 .contacts__icon {
@@ -181,21 +171,18 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
+    @include text (600, 11px, 15px, 0.1em);
     text-transform: uppercase;
-    color: #FFFFFF;
-}
+    color: var(--primary-text-color);
 
-.contacts__time::before {
-    content: '';
-    display: inline-block;
-    margin-right: 20px;
-    width: 60px;
-    height: 1px;
-    background-color: rgba(157, 164, 189, 0.4);
+    &::before {
+        content: '';
+        display: inline-block;
+        margin-right: 20px;
+        width: 60px;
+        height: 1px;
+        background-color: rgba(157, 164, 189, 0.4);
+    }
 }
 
 .contacts__timetable {

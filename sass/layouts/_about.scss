@@ -37,8 +37,5 @@
 
 .about__descr {
     margin-bottom: 40px;
-
-    font-size: 14px;
-    line-height: 1.86;
-    letter-spacing: 0.02em;
+    @include text(null, 14px, 26px, 0.02em);
 }

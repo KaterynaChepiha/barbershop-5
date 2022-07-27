@@ -36,15 +36,15 @@
 .hero__link {
     display: flex;
     align-items: center;
-}
 
-.hero__link::before {
-    content: '';
-    margin-right: 40px;
-    width: 60px;
-    height: 1px;
-    display: inline-block;
-    background-color: #303030;
+    &::before {
+        content: '';
+        margin-right: 40px;
+        width: 60px;
+        height: 1px;
+        display: inline-block;
+        background-color: #303030;
+    }
 }
 
 .hero__right {
@@ -56,10 +56,10 @@
 
 .hero__subtitle {
     margin-bottom: 20px;
-}
 
-.hero__subtitle::before {
-    background-color: rgba(157, 164, 189, 0.6);
+    &::before {
+        background-color: rgba(157, 164, 189, 0.6);
+    }
 }
 
 .hero__title {
@@ -73,5 +73,5 @@
     width: 470px;
     line-height: 1.67;
     letter-spacing: 0.02em;
-    color: #9DA4BD;
+    color: var(--secondary-text-color);
 }
